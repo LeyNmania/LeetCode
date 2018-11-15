@@ -11,7 +11,7 @@ public:
         {
             if(min>p[i])
                 min=p[i];
-            if(p[i]-min>max)
+            else if(p[i]-min>max)
                 max=p[i]-min;
         }
         return max;
