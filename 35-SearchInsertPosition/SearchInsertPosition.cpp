@@ -30,7 +30,7 @@ public:
 
         while (low <= high) 
         {
-            int mid = (high+low)/2;
+            int mid = low+(high-low)/2; // if (high+low)/2 may cause overflow
             if (nums[mid] < target)
                 low = mid+1;
             else
