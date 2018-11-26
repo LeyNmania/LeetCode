@@ -1,5 +1,5 @@
 // Not binary search but 4ms beats 98%
-// In fact it`s a competitive solution instead of a practice
+// In fact it does not suit for every single situation
 // I`ll post 2 solutions , the first is mine , the other is binary search O(logn)
 class Solution {
 public:
