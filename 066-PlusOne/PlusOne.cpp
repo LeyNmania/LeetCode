@@ -1,5 +1,6 @@
 // This is a fucking genius answer. I learnt it from the discuss part but I also want to learn the general solution.
 // So the first is the BRILLIANT IDEA and the 2nd is general.
+// Both are 0ms
 //----------------------------------------------------
 class Solution {
 public:
