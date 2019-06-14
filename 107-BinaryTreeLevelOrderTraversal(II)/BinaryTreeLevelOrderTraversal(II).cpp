@@ -29,3 +29,37 @@ public:
         return ans;
     }
 };
+/* This is a BFS solution
+Runtime: 4 ms, faster than 97.76% of C++ online submissions for Binary Tree Level Order Traversal II.
+Memory Usage: 13.8 MB, less than 70.29% of C++ online submissions for Binary Tree Level Order Traversal II.
+*/
+class Solution {
+public:
+    vector<vector<int>> levelOrderBottom(TreeNode* root) {
+        vector<vector<int>> res;
+        vector<int> n;
+        if(!root)
+            return res;
+        queue<TreeNode*> q;
+        q.push(root);
+        while(!q.empty())
+        {
+            int a = q.size();
+            while(a>0)
+            {
+                auto node = q.front();
+                n.push_back(node->val);
+                if(node->left)
+                    q.push(node->left);
+                if(node->right)
+                    q.push(node->right);
+                q.pop();
+                --a;
+            }
+            res.emplace_back(n);
+            n.clear();
+        }
+        reverse(res.begin(),res.end());
+        return res;
+    }
+};
